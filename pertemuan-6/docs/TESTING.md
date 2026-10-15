@@ -1,4 +1,4 @@
-# Catatan Pengujian API Mini-LMS
+# Pengujian API Mini-LMS
 
 ## 1. Prasyarat
 
