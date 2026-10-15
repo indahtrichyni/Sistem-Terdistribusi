@@ -56,16 +56,16 @@ curl -i http://127.0.0.1:8000/api/submissions/9005
 
 ## 4. Bukti Pengujian
 Bukti pengujian berupa tangkapan layar hasil pengujian aktual dari Postman dan CMD yang memperlihatkan endpoint, metode HTTP, status respons, serta response body.
-1. `01-Permintaan-valid
+1. 01-Permintaan-valid
 <img width="953" height="503" alt="01-Permintaan valid" src="https://github.com/user-attachments/assets/01bf7703-9ab6-4f97-aa91-e1539c7fcc72" />
 
-2. `02-Assignment-tidak-ditemukan
+2. 02-Assignment-tidak-ditemukan
 <img width="959" height="504" alt="02-Assignment tidak ditemukan" src="https://github.com/user-attachments/assets/78a1590a-4bbd-4162-87f7-b164af283a53" />
 
-3. `03-Input-tidak-lengkap
+3. 03-Input-tidak-lengkap
 <img width="954" height="496" alt="03-Input tidak lengkap" src="https://github.com/user-attachments/assets/36059249-6d7c-4157-b67e-277505996842" />
 
-4. `04-GET-submission-200
+4. 04-GET-submission-200
 <img width="956" height="500" alt="04-GET-submission-200" src="https://github.com/user-attachments/assets/12a07e01-1b0c-462e-a0bc-c2e84448a6bf" />
 
 ## 5. Kesimpulan
