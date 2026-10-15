@@ -49,7 +49,6 @@ Untuk menjalankan dan menguji prototipe ini, diperlukan:
 - PHP 8.0 atau lebih baru dengan ekstensi JSON.
 - Postman untuk melakukan pengujian API secara manual.
 - `curl` untuk mengirim request melalui terminal.
-- Python 3 untuk membuat ulang ilustrasi screenshot SVG (opsional).
 - Bash atau Git Bash untuk menjalankan skrip pengujian otomatis.
 
 ## Menjalankan Server
