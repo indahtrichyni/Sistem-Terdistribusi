@@ -1,4 +1,4 @@
-# Mini-LMS — Submission/File Service (Pertemuan 6)
+# Prototipe Submission/File Service (Pertemuan 6)
 
 Prototipe PHP sederhana untuk mata kuliah Sistem Terdistribusi yang berfungsi menangani pengumpulan tugas pada sistem Mini-LMS. Layanan ini menerima metadata pengumpulan melalui metode HTTP `POST`, menyimpan metadata dalam format JSON, serta menyediakan metode `GET` untuk membaca data submission dan metadata file.
 
