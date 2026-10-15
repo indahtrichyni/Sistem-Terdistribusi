@@ -26,23 +26,21 @@ pertemuan-6/
 ├── API_CONTRACT.md
 ├── Mini-LMS.postman_collection.json
 ├── README.md
-├── gen_screenshots.py
 ├── index.php
 └── test_api.sh
 ```
 
-**Keterangan folder dan file:**
+### Keterangan Folder dan File
 
-- `data/assignments.json`: menyimpan data awal assignment atau tugas yang tersedia.
-- `docs/bukti/`: tempat menyimpan bukti mentah hasil pengujian API, jika tersedia.
-- `docs/screenshots/`: tempat menyimpan screenshot atau ilustrasi hasil pengujian.
-- `docs/TESTING.md`: berisi dokumentasi skenario dan hasil pengujian.
-- `API_CONTRACT.md`: menjelaskan endpoint, metode HTTP, format request dan response, serta kode status API.
-- `Mini-LMS.postman_collection.json`: koleksi request API yang dapat diimpor ke Postman.
-- `README.md`: dokumentasi utama proyek.
-- `gen_screenshots.py`: skrip Python untuk membuat ilustrasi screenshot SVG.
-- `index.php`: implementasi layanan PHP yang menangani request dan response API.
-- `test_api.sh`: skrip pengujian otomatis menggunakan shell dan curl.
+- `data/`: folder untuk menyimpan data yang digunakan oleh layanan, jika tersedia.
+- `docs/bukti/`: folder untuk menyimpan bukti asli hasil pengujian API, seperti hasil pengujian dari Postman atau terminal.
+- `docs/screenshots/`: folder untuk menyimpan screenshot hasil pengujian API sebagai bukti dokumentasi.
+- `docs/TESTING.md`: berisi dokumentasi skenario pengujian, langkah pengujian, hasil yang diharapkan, dan hasil aktual.
+- `API_CONTRACT.md`: menjelaskan kontrak API, meliputi endpoint, metode HTTP, format request dan response, serta kode status HTTP.
+- `Mini-LMS.postman_collection.json`: berisi koleksi request API yang dapat diimpor ke Postman untuk mempermudah pengujian endpoint.
+- `README.md`: dokumentasi utama proyek yang menjelaskan gambaran umum, struktur folder, cara menjalankan layanan, penggunaan API, dan cara melakukan pengujian.
+- `index.php`: file utama yang berisi implementasi layanan PHP untuk menangani request, memproses data, melakukan validasi, dan mengirimkan response API.
+- `test_api.sh`: skrip shell untuk menjalankan pengujian API secara otomatis menggunakan `curl`.
 
 ## Kebutuhan Sistem
 
