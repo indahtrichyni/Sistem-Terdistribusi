@@ -1,0 +1,104 @@
+{
+  "info": {
+    "name": "Mini-LMS Submission/File Service",
+    "_postman_id": "7b13f2da-9eae-4dca-96d4-2a51c3f88061",
+    "description": "Collection pengujian Pertemuan 6. Ganti base_url bila diperlukan.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    },
+    {
+      "key": "submission_id",
+      "value": "9001"
+    },
+    {
+      "key": "file_id",
+      "value": "f-example"
+    }
+  ],
+  "item": [
+    {
+      "name": "01 - Permintaan valid",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"assignment_id\": 501,\n  \"student_id\": 101,\n  \"filename\": \"tugas-mini-lms.zip\",\n  \"file_size\": 248000,\n  \"content_type\": \"application/zip\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{base_url}}/api/submissions"
+      }
+    },
+    {
+      "name": "02 - Assignment tidak ditemukan",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"assignment_id\": 99999,\n  \"student_id\": 101,\n  \"filename\": \"tugas.zip\",\n  \"file_size\": 1000,\n  \"content_type\": \"application/zip\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{base_url}}/api/submissions"
+      }
+    },
+    {
+      "name": "03 - Input tidak lengkap",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"assignment_id\": 501,\n  \"filename\": \"tugas.zip\",\n  \"file_size\": 1000,\n  \"content_type\": \"application/zip\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{base_url}}/api/submissions"
+      }
+    },
+    {
+      "name": "GET - Submission by ID",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/submissions/{{submission_id}}"
+      }
+    },
+    {
+      "name": "GET - File metadata by ID",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/files/{{file_id}}"
+      }
+    }
+  ]
+}

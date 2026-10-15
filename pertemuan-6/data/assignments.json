@@ -1,0 +1,16 @@
+{
+  "assignments": [
+    {
+      "assignment_id": 501,
+      "title": "Tugas Prototipe File Service",
+      "course": "Sistem Terdistribusi",
+      "active": true
+    },
+    {
+      "assignment_id": 502,
+      "title": "Latihan API Mini-LMS",
+      "course": "Sistem Terdistribusi",
+      "active": true
+    }
+  ]
+}
