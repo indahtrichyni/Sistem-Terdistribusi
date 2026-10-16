@@ -5,7 +5,7 @@ Tugas ini merupakan implementasi sederhana dari konsep Name Service dan Service 
 ## Anggota Kelompok
 
 | No. | Nama | NIM | Kontribusi |
-|:---:|------|:---:|---|
+|:---:|----|:---:|---|
 | 1 | Indah Tricahyani | 240209501078 | Mengoordinasikan pembagian tugas serta konfigurasi `services.json`, `gateway.php`, dan `course.php`. |
 | 2 | Aulia Aqilah | 240209501038 | Melakukan pengujian menggunakan Postman dan mengambil tiga tangkapan layar skenario uji (valid, gagal, dan perubahan port) sebagai bukti pengujian. |
 | 3 | Mutia Inayah | 230209552025 | Menyusun dokumentasi `README.md` secara terstruktur, termasuk membuat diagram alur lookup. |
