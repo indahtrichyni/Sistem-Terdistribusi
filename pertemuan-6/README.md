@@ -91,7 +91,7 @@ Perintah tersebut digunakan pada lingkungan yang mendukung shell Unix, seperti L
 | 3 | Input tidak lengkap | `POST` | `400 Bad Request` |
 | 4 | Membaca data submission | `GET` | `200 OK` |
 
-Status pada tabel merupakan hasil yang diharapkan untuk setiap skenario dan perlu dicocokkan dengan hasil pengujian aktual.
+Status pada tabel merupakan hasil yang diharapkan untuk setiap skenario.
 
 ### 3. Contoh Permintaan API
 
