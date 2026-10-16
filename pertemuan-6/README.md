@@ -149,8 +149,6 @@ Seluruh anggota kelompok berkontribusi dalam diskusi, pemeriksaan hasil implemen
 
 ## Kesimpulan
 
-Proyek Mini-LMS Submission/File Service merupakan prototipe layanan sederhana yang menerapkan komunikasi HTTP dalam Sistem Terdistribusi. Melalui metode `POST` dan `GET`, layanan dapat menerima data submission, memvalidasi permintaan, serta membaca kembali metadata yang tersimpan dalam format JSON.
+Proyek Mini-LMS Submission/File Service merupakan prototipe layanan berbasis HTTP yang menerapkan konsep Sistem Terdistribusi melalui penggunaan metode POST dan GET. Metode POST digunakan untuk mengirimkan metadata pengumpulan tugas, sedangkan metode GET digunakan untuk mengambil kembali data submission dan metadata file yang tersimpan dalam format JSON. Layanan ini juga menerapkan validasi input serta memberikan respons HTTP sesuai dengan kondisi permintaan.
 
-Prototipe ini juga menunjukkan konsep pemisahan metadata dari isi file fisik. Walaupun file belum benar-benar diunggah ke server, pencatatan identifier dan rancangan lokasi internal menjadi dasar untuk pengembangan layanan penyimpanan file pada tahap selanjutnya.
-
-Pengujian dilakukan untuk memeriksa respons layanan terhadap permintaan valid maupun tidak valid, dengan hasil aktual yang dicatat dalam dokumentasi pengujian.
+Prototipe ini menunjukkan pemisahan antara metadata submission dan isi file fisik melalui penggunaan submission_id, file_id, dan internal_location. Namun, implementasi saat ini masih terbatas pada penyimpanan metadata dan belum mendukung unggahan isi file secara langsung. Pengujian melalui Postman dan terminal digunakan untuk memeriksa respons terhadap permintaan valid, assignment yang tidak ditemukan, input tidak lengkap, serta pengambilan data submission. Dengan demikian, prototipe ini dapat menjadi dasar pengembangan layanan pengumpulan tugas yang lebih lengkap, dengan penambahan fitur unggah file, keamanan akses, dan penyimpanan file yang sesungguhnya.
