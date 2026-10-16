@@ -60,20 +60,56 @@ php -S 127.0.0.1:8101 gateway.php
 
 ## Diagram Alur Lookup
 
-Berikut adalah representasi alur lookup ketika klien memanggil API:
+Berikut adalah representasi alur *service lookup* ketika klien memanggil API menggunakan parameter `service=course`.
 
-[Client (Postman)]
-       │
-       │ Request: GET /?service=course
-       ▼
-[API Gateway] ──(1. Lookup nama "course")──► [Registry (services.json)]
-       │                                            │
-       │◄──(2. Return "http://127.0.0.1:8103")──────┘
-       │
-       ├──(3. Gateway membuka koneksi ke alamat target)
-       ▼
-[Course Service]
+```text
+┌──────────────────────┐
+│   Client (Postman)   │
+└──────────┬───────────┘
+           │
+           │ Request: GET /?service=course
+           ▼
+┌──────────────────────┐
+│     API Gateway      │
+└──────────┬───────────┘
+           │
+           │ (1) Lookup nama "course"
+           ▼
+┌──────────────────────┐
+│ Registry (services.json)│
+└──────────┬───────────┘
+           │
+           │ (2) Return alamat service
+           │     http://127.0.0.1:8103
+           ▼
+┌──────────────────────┐
+│     API Gateway      │
+└──────────┬───────────┘
+           │
+           │ (3) Meneruskan request
+           ▼
+┌──────────────────────┐
+│   Course Service     │
+│   Port: 8103         │
+└──────────┬───────────┘
+           │
+           │ (4) Response
+           ▼
+┌──────────────────────┐
+│     API Gateway      │
+└──────────┬───────────┘
+           │
+           │ (5) Mengembalikan response
+           ▼
+┌──────────────────────┐
+│   Client (Postman)   │
+└──────────────────────┘
+```
 
+### Penjelasan Singkat
 
-Penjelasan Singkat:
-Klien (seperti Postman) tidak pernah tahu di alamat IP dan port berapa Course Service berada. Klien hanya mengirimkan nama logis (`course`) ke API Gateway. Gateway* kemudian bertindak sebagai Resolver yang membaca buku daftar alamat (`services.json`). Setelah alamat aslinya ditemukan, Gateway meneruskan request tersebut ke Course Service, menerima balasannya, dan mengembalikannya ke klien.
+Klien, seperti Postman, tidak perlu mengetahui alamat dan port langsung dari *Course Service*. Klien cukup mengirimkan request ke API Gateway dengan menyertakan nama logis service, yaitu `course`.
+
+Selanjutnya, API Gateway bertindak sebagai **resolver** dengan membaca file registry `services.json` untuk menemukan alamat tujuan, yaitu `http://127.0.0.1:8103`. Setelah alamat ditemukan, Gateway meneruskan request ke Course Service, menerima response, lalu mengembalikannya kepada klien.
+
+Dengan mekanisme ini, klien cukup berkomunikasi melalui API Gateway tanpa harus mengetahui lokasi setiap service secara langsung.
