@@ -1,1 +1,1 @@
-# Tugas Sistem-Terdistribusi Kelompok 3
+# Tugas Sistem Terdistribusi Kelompok 3
