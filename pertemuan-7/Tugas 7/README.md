@@ -3,11 +3,13 @@
 Tugas ini merupakan implementasi sederhana dari konsep Name Service dan Service Discovery pada Sistem Terdistribusi. Proyek ini membuktikan bagaimana sebuah Client dapat menghubungi target Service menggunakan nama logis yang stabil tanpa perlu mengetahui alamat IP dan Port fisik yang bisa berubah sewaktu-waktu.
 
 ## Anggota Kelompok
-1. Indah Tricahyani - 240209501078 (Mengordinasikan pembagian tugas dan konfigurasi services.json, gateway.php, dan course.php)
-2. Aulia Aqilah - 240209501038 (Mengeksekusi pengujian di Postman dan mengambil tiga tangkapan layar skenario uji (valid, gagal, dan ubah port) sebagai bukti)
-3. Mutia Inayah - 230209552025 (Menyusun file dokumentasi README.md secara terstruktur lengkap dengan pembuatan diagram alur lookup.)
-4. Arjun - 240209502022 (Bertugas menyatukan seluruh berkas pengumpulan (zip), memastikan kesiapan tugas)
 
+| No. | Nama | NIM | Kontribusi |
+|:---:|---|:---:|---|
+| 1 | Indah Tricahyani | 240209501078 | Mengoordinasikan pembagian tugas serta konfigurasi `services.json`, `gateway.php`, dan `course.php`. |
+| 2 | Aulia Aqilah | 240209501038 | Melakukan pengujian menggunakan Postman dan mengambil tiga tangkapan layar skenario uji (valid, gagal, dan perubahan port) sebagai bukti pengujian. |
+| 3 | Mutia Inayah | 230209552025 | Menyusun dokumentasi `README.md` secara terstruktur, termasuk membuat diagram alur lookup. |
+| 4 | Arjun | 240209502022 | Menggabungkan seluruh berkas pengumpulan ke dalam file ZIP dan memastikan kelengkapan berkas tugas. |
 ---------------
 
 ## Cara Menjalankan Service
